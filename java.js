@@ -1,6 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
 const humanName = String(prompt("Enter your name:"))
 const humanNameElement = document.querySelector("#player-name")
 humanNameElement.textContent = `${humanName}`
+})
 
 
 
