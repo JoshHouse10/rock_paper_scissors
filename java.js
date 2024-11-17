@@ -1,3 +1,12 @@
+const humanName = String(prompt("Enter your name:"))
+const humanNameElement = document.querySelector("#player-name")
+humanNameElement.textContent = `${humanName}`
+
+
+
+
+
+
 function getComputerChoice() {
     let num = Math.ceil(Math.random()*3)
     switch(num) {
@@ -5,24 +14,62 @@ function getComputerChoice() {
      case 2: return "paper";
      case 3: return "scissors";
     };
+
+
     
  };
 
 let humanScore = 0;
 let computerScore = 0;
 
-const scoreContainer = document.querySelector(".score-container")
-let scoreMessage = document.createElement("p")
-scoreMessage.classList.add("score")
-scoreMessage.textContent = `Your Score: ${humanScore} - Computer Score: ${computerScore}`
-scoreContainer.appendChild(scoreMessage)
+const scoreContainer = document.querySelector(".score-container");
+let scoreMessage = document.createElement("p");
+scoreMessage.classList.add("score");
+scoreMessage.textContent = `Your Score: ${humanScore} - Computer Score: ${computerScore}`;
+scoreContainer.appendChild(scoreMessage);
 
-let roundMessage = document.createElement("p")
-roundMessage.classList.add("round-message")
+let roundMessage = document.createElement("p");
+roundMessage.classList.add("round-message");
+
+
+
+
+
 
 
 
 function playRound(getHumanChoice, getComputerChoice) {
+
+    userIconContainer = document.querySelector("#user-square");
+    userIconContainer.innerHTML="";
+    computerIconContainer = document.querySelector("#computer-square");
+    computerIconContainer.innerHTML=""
+
+    const userIcon = document.createElement("i")
+    userIcon.classList.add("fa-solid")
+    userIcon.classList.add("icon-large")
+    if(getHumanChoice == "rock") userIcon.classList.add("fa-hand-rock");
+    
+        else if(getHumanChoice == "paper") userIcon.classList.add("fa-hand-paper");
+        else if(getHumanChoice == "scissors") userIcon.classList.add("fa-hand-scissors")
+        
+        userIconContainer.appendChild(userIcon);
+
+    const computerIcon = document.createElement("i");
+    computerIcon.classList.add("fa-solid")
+    computerIcon.classList.add("icon-large")
+
+    if(getComputerChoice == "rock") computerIcon.classList.add("fa-hand-rock");
+
+        else if(getComputerChoice == "paper") computerIcon.classList.add("fa-hand-paper");
+        else if (getComputerChoice == "scissors") computerIcon.classList.add("fa-hand-scissors");
+
+            computerIconContainer.appendChild(computerIcon);
+
+    
+
+
+
     if (getHumanChoice == getComputerChoice) {
         roundMessage.textContent = `Your ${getHumanChoice} and computers ${getComputerChoice} makes a draw!`;
         scoreContainer.appendChild(roundMessage);

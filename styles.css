@@ -12,7 +12,7 @@ body {
 
 .game-container {
     width: 100%; 
-    height: 60vh;
+    height: 12.5vh;
     margin: auto;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ body {
     border: solid white;
     border-radius: 10px;
     background-color: rgb(27, 27, 27);
-    color: white;
+    color: rgb(228, 225, 41);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,26 +58,74 @@ body {
 }
 
 .score-container {
-    width: 80%;
-    height: 30vh;
+    width: 50%;
+    height: 20vh;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 2.5%;
 }
 
 .score {
   color: white;
   text-align: center;
-  font-size: 48px;
+  font-size: 32px;
 }
 
 .round-message {
 
   color: white;
   text-align: center;
-  font-size: 48px;
+  font-size: 32px;
 }
 
+.choice-container {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.versus {
+  font-size: 64px;
+  color: white;
+  font-weight: 700;
+}
+
+.choice {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.square {
+  border:  4px solid white;
+  background-color: rgb(27, 27, 27);
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.player-text {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.icon-large {
+  text-align: center;
+  font-size: 124px;
+  color: rgb(228, 225, 41);
+}
 
 
 
